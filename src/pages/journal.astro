@@ -1,8 +1,22 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+import BaseLayout from "../layouts/BaseLayout.astro";
+const articles = await Astro.glob("../pages/journal/*/*.md");
+
 const pageTitle = "JOURNAL";
 ---
+
 <BaseLayout pageTitle={pageTitle}>
-    <a href="../journal/naissanceBaR/">Naissance de la Boîte à Rêves</a><br>
-    <a href="../journal/naissanceR3T/">Naissance de la Rencontre du 3ème Type</a>
+    <ul class="random">
+        {
+            articles.map((article) => (
+                <li>
+                    <a href={article.url}>{article.frontmatter.title}</a>
+                </li>
+            ))
+        }
+    </ul>
+    <ul>
+        <li>coucou</li>
+        <li>mmmm</li>
+    </ul>
 </BaseLayout>

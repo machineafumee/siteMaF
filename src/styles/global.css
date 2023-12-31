@@ -80,6 +80,10 @@ nav a:hover {
 	padding: .9rem;
 }
 
+.active {
+background-color: var(--link);
+}
+
 h2,
 h3,
 h4,
@@ -161,7 +165,7 @@ ol {
 }
 
 ul {
-	list-style-position: inside;
+	list-style: none;
 }
 
 ol {

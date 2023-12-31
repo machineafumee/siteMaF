@@ -17,7 +17,7 @@ const goal = 3;
 const pageTitle = "INFOS";
 ---
 <BaseLayout pageTitle={pageTitle}>
-<ul>
+<ul class="random">
 	<li>My name is {identity.firstName}.</li>
 	<li>I live in {identity.country} and I work as a {identity.occupation}.</li>
 	{identity.hobbies.length >= 2 &&
