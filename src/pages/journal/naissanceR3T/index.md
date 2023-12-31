@@ -5,7 +5,7 @@ pubDate: 2023-12-25
 description: Comment l'idée du Rencontre du 3ème Type est née.
 author: David
 image: './boiteReves.svg'
-qui:
+artistes:
 - César
 - David
 quoi: R3T

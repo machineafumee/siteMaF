@@ -5,7 +5,7 @@ pubDate: 2023-12-25
 description: Comment l'idée de la Boite à Rêves est née.
 author: David
 image: './naissanceBaR/boiteReves.svg'
-qui:
+artistes:
 - Élise
 - David
 - Bisou

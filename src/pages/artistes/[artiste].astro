@@ -1,0 +1,25 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+export async function getStaticPaths() {
+  const articles = await Astro.glob('../journal/*/*.md');
+
+  return [
+    { params: { artiste: "Bisou" }, props: {journal: articles}},
+    { params: { artiste: "David" }, props: {journal: articles}},
+    { params: { artiste: "Élise" }, props: {journal: articles}},
+    { params: { artiste: "César" }, props: {journal: articles}}
+  ]
+}
+
+const { artiste } = Astro.params;
+const { journal } = Astro.props;
+const articlesArtiste = journal.filter((article) => article.frontmatter.artistes?.includes(artiste));
+---
+
+<BaseLayout pageTitle={artiste}>
+  <p>Posts tagged with {artiste}</p>
+  <ul>
+    {articlesArtiste.map((article) => <li><a href={article.url}>{article.frontmatter.title}</a></li> )}
+  </ul>
+ </BaseLayout>
