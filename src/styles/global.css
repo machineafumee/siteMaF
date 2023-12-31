@@ -1,0 +1,250 @@
+/*
+  The CSS in this style tag is based off of Bear Blog's default CSS.
+  https://github.com/HermanMartinus/bearblog/blob/297026a877bc2ab2b3bdfbd6b9f7961c350917dd/templates/styles/blog/default.css
+  License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
+ */
+
+:root {
+	--text: #00f;
+	--background: #ff0;
+	--title: #f0f;
+	--link: #0f0;
+}
+
+@font-face {
+	font-family: 'Monaco';
+	src: url('/fonts/monaco.woff') format('woff');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Monaco';
+	src: url('/fonts/monaco-bold.woff') format('woff');
+	font-weight: 700;
+	font-style: bold;
+	font-display: swap;
+}
+
+/* Works on Firefox */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	scrollbar-color: var(--link) var(--background);
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+	width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+	background: var(--background);
+}
+
+*::-webkit-scrollbar-thumb {
+	background-color: var(--link);
+	border-radius: 20px;
+	border: 4px solid var(--background);
+}
+
+html {
+    height: 100%;
+    padding: 0;
+	margin:0;
+	font-family: 'Monaco', sans-serif;
+	font-size: 18px;
+	color: var(--text);
+	background-color: var(--background);
+}
+
+body {
+	width: 720px;
+	max-width: 100%;
+	margin: auto;
+}
+
+nav {
+	font-weight: bold;
+	padding: .9rem 0;
+}
+
+nav a {
+	text-decoration: none;
+	padding: .9rem;
+}
+
+nav a:hover {
+	padding: .9rem;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: bold;
+	padding: .9rem .9rem .45rem .9rem;
+	text-transform: uppercase;
+}
+
+h1 {
+	padding: .6rem 0.9rem 0 .9rem;
+	font-weight: bold;
+	background-color: var(--title);
+	color: var(--background);
+	text-transform: uppercase;
+}
+
+p {
+    line-height: 1.3;
+    text-align: justify;
+	-webkit-hyphens: auto;
+	-moz-hyphens: auto;
+	-ms-hyphens: auto;
+	hyphens: auto;
+  }
+
+small,
+p {
+	padding: .9rem .9rem .45rem .9rem;
+  }
+  
+a {
+	text-decoration-color: var(--link);
+	text-decoration-thickness: .15em;
+	color: var(--text);
+}
+
+a:hover {
+	background-color: var(--link);
+	padding: .15rem 0 0 0;
+}
+
+form {
+	padding: .9rem;
+	background-color: var(--link);
+	font-weight: bold;
+
+}
+
+
+button,
+input,
+textarea {
+	color: #00f;
+	border: none;
+	font-family: inherit;
+	background-color: var(--link);
+	width:fit-content
+}
+
+
+table {
+	width: 100%;
+	padding: .9rem;
+}
+
+main img,
+main video,
+main audio {
+  max-width: 100%;
+  height: auto;
+}
+
+pre,
+ul,
+ol {
+	padding: .9rem;
+}
+
+ul {
+	list-style-position: inside;
+}
+
+ol {
+	list-style-position: inside;
+}
+
+pre>code {
+	all: unset;
+}
+
+blockquote {
+	border-left: 3px solid var(--title);
+
+}
+
+@media (max-width: 720px) {
+	body {
+		font-size: 15px;
+	}
+}
+
+.glitch {
+	animation: glitch 9s ease-in-out infinite alternate-reverse;
+  }
+  
+  @keyframes glitch {
+	0% {
+	  -moz-transform: matrix(1, -0, 0, 1, 0px, 0px);
+	  -webkit-transform: matrix(1, -0, 0, 1, 0, 0);
+	  -o-transform: matrix(1, -0, 0, 1, 0, 0);
+	  -ms-transform: matrix(1, -0, 0, 1, 0, 0);
+	  transform: matrix(1, -0, 0, 1, 0, 0);
+	  transform-origin: right bottom;
+	  -webkit-transform-origin: right bottom;
+	}
+  
+	20% {
+	  -moz-transform: matrix(1, -0, 0, 1, 0px, 0px);
+	  -webkit-transform: matrix(1, -0, 0, 1, 0, 0);
+	  -o-transform: matrix(1, -0, 0, 1, 0, 0);
+	  -ms-transform: matrix(1, -0, 0, 1, 0, 0);
+	  transform: matrix(1, -0, .03, 1, 0, 0);
+	  transform-origin: right bottom;
+	  -webkit-transform-origin: right bottom;
+	}
+  
+	40% {
+	  -moz-transform: matrix(1, -0, 0, 1, 0px, 0px);
+	  -webkit-transform: matrix(1, -0, 0, 1, 0, 0);
+	  -o-transform: matrix(1, -0, 0, 1, 0, 0);
+	  -ms-transform: matrix(1, -0, 0, 1, 0, 0);
+	  transform: matrix(1, -0, 0, 1, 0, 0);
+	  transform-origin: right bottom;
+	  -webkit-transform-origin: right bottom;
+	}
+  
+	60% {
+	  -moz-transform: matrix(1, -0, 0, 1, 0px, 0px);
+	  -webkit-transform: matrix(1, -0, 0, 1, 0, 0);
+	  -o-transform: matrix(1, -0, 0, 1, 0, 0);
+	  -ms-transform: matrix(1, -0, 0, 1, 0, 0);
+	  transform: matrix(1, -0, -0.030, 1, 0, 0);
+	  transform-origin: right bottom;
+	  -webkit-transform-origin: right bottom;
+	}
+  
+	80% {
+	  -moz-transform: matrix(1, -0, 0, 1, 0px, 0px);
+	  -webkit-transform: matrix(1, -0, 0, 1, 0, 0);
+	  -o-transform: matrix(1, -0, 0, 1, 0, 0);
+	  -ms-transform: matrix(1, -0, 0, 1, 0, 0);
+	  transform: matrix(1, -0, 0, 1, 0, 0);
+	  transform-origin: right bottom;
+	  -webkit-transform-origin: right bottom;
+	}
+  
+	90% {
+	  -moz-transform: matrix(1, -0, 0, 1, 0px, 0px);
+	  -webkit-transform: matrix(1, -0, 0, 1, 0, 0);
+	  -o-transform: matrix(1, -0, 0, 1, 0, 0);
+	  -ms-transform: matrix(1, -0, 0, 1, 0, 0);
+	  transform: matrix(1, -0, 0.03, 1, 0, 0);
+	  transform-origin: right bottom;
+	  -webkit-transform-origin: right bottom;
+	}
+  }

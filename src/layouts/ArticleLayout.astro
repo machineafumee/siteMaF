@@ -1,0 +1,13 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+const { frontmatter } = Astro.props;
+---
+<BaseLayout>
+    <h1>{frontmatter.title}</h1>
+    <p>{frontmatter.quoi && <span>Projet: {frontmatter.quoi} </span>}<br>
+       {frontmatter.qui && <span>Artistes: { frontmatter.qui.join( ', ')}</span>} <br>
+       {frontmatter.ou && <span>Lieux: { frontmatter.ou.join( ', ')}</span>} <br>
+       {frontmatter.avec && <span>Soutiens: { frontmatter.avec.join( ', ')}</span>}
+      </p>
+    <slot />
+</BaseLayout>

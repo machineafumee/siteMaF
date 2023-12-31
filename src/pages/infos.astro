@@ -1,0 +1,32 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const identity = {
+firstName: "Sarah",
+country: "Canada",
+occupation: "Technical writer",
+hobbies: ["photography", "birdwatching", "baseball"],
+};
+
+const skills = ["html", "css", "Astro"];
+
+const happy = true;
+const finished = false;
+const goal = 3;
+
+const pageTitle = "INFOS";
+---
+<BaseLayout pageTitle={pageTitle}>
+<ul>
+	<li>My name is {identity.firstName}.</li>
+	<li>I live in {identity.country} and I work as a {identity.occupation}.</li>
+	{identity.hobbies.length >= 2 &&
+		<li>Two of my hobbies are: {identity.hobbies[0]} and {identity.hobbies[1]}</li>
+	  }
+</ul>
+<p>My skills are: {skills.map((skill) => <span>{skill} </span>)}</p>
+{happy && <p>I am happy to learn Astro !</p> }
+{finished && <p>I finished this tutorial</p> }
+{goal === 3 ? <p>My goal is to finish in 3 days.</p> : <p>My goal is not 3 days.</p> }
+</BaseLayout>
+
